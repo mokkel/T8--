@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#section1 {
+    background-color: #12569F;
+}
+
+#section2 {
+    background-color: #DF4588;
+}
+
+#section3 {
+    background-color: #000000;
+}
+
+@media only screen and (max-width: 768px)  {
+    #section1 {
+    background-color: #12569F;
+}
+
+#section2 {
+    background-color: #DF4588;
+}
+
+#section3 {
+    background-color: #000000;
+}
+}
