@@ -5,24 +5,72 @@
 
 #section1 {
     background-color: #12569F;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
 }
 
 #section2 {
     background-color: #DF4588;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: start;
+    gap: 25px;
+    padding: 10px;
+    
 }
 
 #section3 {
     background-color: #000000;
     display: grid;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: start;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 2rem;
+  }
+
+.logo {
+    justify-content: flex-start;
+}
+
+.item {
+    justify-content: flex-end;
+    text-decoration: none;
+}
+
+.drawing {
+    max-height: 400px;
+    max-width: 30%;
+    margin-top: 80px;
+    margin-bottom: -300px;
+    padding-bottom: 200px;
+    
+}
+
+.show {
+    /* background-color: grey; */
+    color: black;
+    padding-top: 50px;
+}
+
+.kampagnevideo {
+    padding: 50px;
+}
 
 @media only screen and (max-width: 768px)  {
     
-    #section1 {
+#section1 {
     background-color: #12569F;
 }
 
