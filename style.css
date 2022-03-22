@@ -1,7 +1,37 @@
+@font-face {
+  font-family: Krungthep;
+  src: url("Krungthep.woff2");
+}
+@font-face {
+  font-family: Malaya;
+  src: url("MalayalamSangamMN-01.woff2");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+header {
+  font-family: Krungthep;
+}
+
+p {
+  font-family: Malaya;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.mobilekampagne {
+  display: none;
 }
 
 img {
@@ -10,8 +40,13 @@ img {
 }
 
 .headlineimg {
-  padding: 30px;
-  margin-top: 50px;
+  /* position: relative; */
+  /* top: -30px; */
+  margin-bottom: -80px;
+}
+
+.col_right {
+  padding-right: 5px;
 }
 
 #section1 {
@@ -20,17 +55,44 @@ img {
   justify-content: center;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-top: 100px;
+  background-image: url(images/Yasmine\ [Converted].svg);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 150px;
 }
 
-
-
 #section2 {
-  background-color: #000000;
-  color: white;
-  text-align: center;
+  background-color: #e66ea2;
   display: grid;
+  grid-template-columns: repeat(1, minmax(300px, 1fr));
   justify-items: center;
+  align-items: start;
   padding: 30px;
+  color: white;
+}
+
+#section2½ {
+  background-color: #000000;
+  font-size: 2rem;
+  color: white;
+  display: grid;
+  margin: 0;
+  justify-items: center;
+  align-items: center;
+  height: 600px;
+}
+
+.talebobbel {
+  position: relative;
+  left: 412px;
+  top: -28px;
+  height: 150%;
+}
+
+.årskort {
+  max-width: 50%;
 }
 
 #section3 {
@@ -42,8 +104,6 @@ img {
   padding: 20px;
   padding-bottom: 50px;
 }
-
-
 
 footer {
   background-color: #000000;
@@ -114,7 +174,9 @@ a {
 .nav-logo {
   justify-content: center;
   height: 80px;
-  width: 100px;
+  width: 80px;
+  position: relative;
+  left: 35px;
 }
 
 .nav-link {
@@ -140,19 +202,21 @@ a {
 
 .section1_wrapper {
   background-color: white;
+  opacity: 40%;
   display: flex;
-  width: 90%;
+  width: 95%;
   padding: 20px;
   justify-content: center;
-  background-image: url(images/Yasmine\ [Converted].svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 600px;
+
+  height: 700px;
+  margin-bottom: 150px;
 }
 
 .kampagnevideo {
-  padding: 20px;
+  padding-top: 30px;
+  margin-bottom: -100px;
+  position: relative;
+  top: -230px;
 }
 
 .show {
@@ -162,6 +226,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 10px;
+  border: #000000 solid 2.5px;
 }
 
 .articleimg {
@@ -184,45 +249,21 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 5rem;
-    flex-direction: column;
-    background-color: #fff;
-    width: 100%;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  body {
+    margin: 0;
   }
 
-  .nav-menu.active {
-    left: 0;
+  .nav-menu {
+    flex-direction: row;
+    width: 405px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
   }
 
   .nav-item {
     margin: 2.5rem 0;
-  }
-
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    margin-right: 29px;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    -webkit-transform: translateY(8px) rotate(45deg);
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    -webkit-transform: translateY(-8px) rotate(-45deg);
-    transform: translateY(-8px) rotate(-45deg);
+    margin-left: 4rem;
   }
 
   #section1 {
@@ -233,13 +274,21 @@ a {
   }
 
   #section2 {
-    background-color: black;
+    background-color: #e66ea2;
     display: grid;
-    grid-template-columns: repeat(1, minmax(300px, 1fr));
-    justify-items: center;
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    justify-items: start;
     align-items: start;
+    margin-bottom: -100px;
+    height: 600px;
+    margin: 0px;
+  }
 
-    padding: 10px;
+  #section2½ {
+    height: auto;
+    padding: 50px 0px 30px 0px;
+    width: 100%;
+    text-align: left;
   }
 
   #section3 {
@@ -255,19 +304,65 @@ a {
 
   .show {
     background-color: white;
-    align-items: center;
+    align-items: start;
+    justify-items: center;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 10px;
+    padding: 1px;
+    height: 390px;
+    max-width: 300px;
   }
-  
+
   .articleimg {
-    max-width: 350px;
+    max-width: 250px;
     height: 100%;
     grid-column: 1 / 2;
     grid-row: 1 / 5;
     justify-items: center;
-    padding: 20px;
+    padding: 10px;
+  }
+
+  .kampagnevideo {
+    display: none;
+  }
+
+  .talebobbel {
+    position: relative;
+    left: 65px;
+    top: -163px;
+  }
+
+  .årskort {
+    max-width: 60%;
+  }
+
+  .mobilekampagne {
+    position: relative;
+    top: -262px;
+
+    left: 15px;
+    display: flex;
+  }
+
+  .section2text {
+    position: relative;
+    top: -240px;
+    align-items: start;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .mobilekampagne {
+    display: flex;
+    position: relative;
+    left: -10px;
+  }
+
+  .talebobbel {
+    position: relative;
+    left: 10px;
+    top: -163px;
   }
 }
